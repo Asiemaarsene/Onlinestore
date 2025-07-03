@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <script src="https://use.fontawesome.com/0bd7229511.js"></script>
+    <link rel="stylesheet" href="css/details.css" ;>
+
+</head>
+
+<body>
+    <div class="container cont" style="position:fixed;width:100%">
+
+        <div class="row con">
+           
+            <form method="post">
+                <input type="text" id="signUpUsername" placeholder="First name">
+                <input type="password" id="signUpPassword" placeholder="last name">
+                <input type="text" placeholder="Username">
+                <!--<input type="text" placeholder="Gender">-->
+                <div class="item">
+                    <label for="gender" class="label">Gender</label>
+                    <select id="gender" name="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other" selected>Other</option>
+
+                    </select>
+                </div>
+
+                <input type="text" placeholder="Email address">
+                <button class="button button-home" onclick="signUp()">Create</button>
+
+                <a href="signup.html" class="forgot-password" style="margin:10px">Go back</a>
+
+            </form>
+        </div>
+    </div>
+
+    <script>
+        let users = {};
+
+        function signUp() {
+            const username = document.getElementById("signUpUsername").value;
+            const password = document.getElementById("signUpPassword").value;
+            if (username && password) {
+                users[username] = password;
+                alert("Sign up successful! You can now log in.");
+            } else {
+                alert("Please fill in the form.");
+            }
+        }
+
+        function logIn() {
+            const username = document.getElementById("loginUsername").value;
+            const password = document.getElementById("loginPassword").value;
+            if (users[username] && users[username] === password) {
+                alert("Log in successful! Welcome, " + username);
+            } else {
+                alert("Invalid username or password.");
+            }
+        }
+    </script>
+
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

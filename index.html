@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Arsene</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/0bd7229511.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" ;>
+    <meta charset="utf-8">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row title">
+            <center><b>
+                    <h4>ONLINE STORE</h4>
+                </b></center>
+        </div>
+        <div class="row">
+            <ul class="navbar">
+                <li>
+                    <!--Hamburger menu-->
+                    <button class="hamburger">☰</button>
+                    <div class="menu" id="menu">
+                        <a href="signup.html">Sign up</a>
+                        <a href="login.html">Log in</a>
+                        <a href="#services">About us</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+
+
+                    <!--Hamburger menu-->
+                </li>
+
+                <li>
+                    <a href="index.html">
+                        <i class="fa fa-home" aria-hidden="true"></i> Home
+                    </a>
+                </li>
+
+                <li>
+                    <div class="dropdown" id="dropdown">
+                        <div class="dropdown-button" onclick="toggleDropdown()">
+                            <span><i class="fa fa-user-o"></i> Account</span>
+                            <div class="arrow" id="arrow">▼</div>
+                        </div>
+                        <div class="dropdown-content">
+                            <a href="login.html" class="signin" style="text-align: center;">Sign in</a>
+                            <a href="#" style="text-align: center;">Orders</a>
+                            <a href="#" style="text-align: center;">Logout</a>
+                        </div>
+                    </div>
+
+                    <script>
+                        function toggleDropdown() {
+                            const dropdown = document.getElementById('dropdown');
+                            const arrow = document.getElementById('arrow');
+                            dropdown.classList.toggle('open');
+                            arrow.classList.toggle('up');
+                        }
+                    </script>
+                </li>
+
+                <li>
+                    <a href="categories.html">
+                        <i class="fa fa-list" aria-hidden="true"></i> Categories
+                    </a>
+                </li>
+
+                <li>
+                    <a href="f.html">
+                        <i class="fa fa-question-circle" aria-hidden="true"></i> Help
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+
+        <!--SEARCH BAR-->
+
+        <div class="row hero" style="padding-top:50px">
+            <p class="text-center"></p>
+
+            <div class="row mb-3">
+                <div class="col-sm-10 offset-sm-1">
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search products..."
+                            aria-label="Search">
+                        <button class="btn btn-outline-primary" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!--SEARCH BAR-->
+
+        <!--FIRST ROW CONTAINING PRODUCTS-->
+        <h5>Top selling items</h5>
+        <div class="row space" style="background-color:white;">            
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-header">Wallclock</div>
+                        
+                            <P><img src="pictures/Home_6.jpg" alt="1" class="img-fluid"
+                                    style="height:170px;width:100%;"></P>
+                        
+                        Ksh 1,150<button class="btn btn-danger cart"
+                                onclick="gta('event','click',{'event_category':'CTA','event_label':'add to cart button'})">Add
+                                to cart</button>
+                        
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-header">Cocacola</div>
+                        
+                            <P><img src="pictures/14.jpg" alt="" class="img-fluid" style="height:170px;width:100%;"></P>
+                        
+                        Ksh 35<button class="btn btn-danger cart">Add to cart</button>
+                        
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-header fit">Digital watch</div>
+                        
+                            <P><img src="pictures/12.jpg" alt="" class="img-fluid" style="height:170px;width:100%;"></P>
+                        
+                        Ksh 2,000<button class="btn btn-danger cart">Add to
+                                cart</button>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-header">Shirt</div>
+                        
+                            <P><img src="pictures/4.jpg" alt="" class="img-fluid" style="height:170px;width:100%;"></P>
+                        
+                        Ksh 400<button class="btn btn-danger cart">Add to cart</button>
+                        
+                    </div>
+                </div>
+            
+        </div>
+        <!--FIRST ROW CONTAINING PRODUCTS-->
+
+        <!--SECOND ROW CONTAINING PRODUCTS-->
+        <h5>New arrivals</h5>
+        <div class="row space" style="background-color: white;">
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-header">Bag</div>
+                        
+                            <P><img src="pictures/5.jpg" alt="" class="img-fluid" style="height:170px;width:100%;"></P>
+                        
+                        Ksh 1,250<button class="btn btn-danger cart">Add to cart</button>
+                        
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-header fit">Wrist watch</div>
+                        
+                            <P><img src="pictures/6.jpg" alt="" class="img-fluid" style="height:170px;width:100%;"></P>
+                        
+                        Ksh 350<button class="btn btn-danger cart">Add to cart</button>
+                        
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-header">Soda</div>
+                        
+                            <P><img src="pictures/7.jpg" alt="" class="img-fluid" style="height:170px;width:100%;"></P>
+                        
+                        Ksh 40<button class="btn btn-danger cart">Add to cart</button>
+                        
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-header">Nailpollish</div>
+                        
+                            <P><img src="pictures/8.jpg" alt="" class="img-fluid" style="height:170px;width:100%;"></P>
+                        
+                        Ksh 400<button class="btn btn-danger cart">Add to cart</button>
+                        
+                    </div>
+                </div>
+            
+        </div>
+        <!--SECOND ROW CONTAINING PRODUCTS-->
+
+        <!--THIRD ROW CONTAINING PRODUCTS-->
+        <div class="row space" style="background-color: white;">
+            
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-header">Camera</div>
+                        
+                            <P><img src="pictures/16.jpg" alt="" class="img-fluid" style="height:170px;width:100%;"></P>
+                        
+                        Ksh 11,500<button class="btn btn-danger cart">Add to
+                                cart</button>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-header">Laptop</div>
+                        
+                            <P><img src="pictures/10.jpg" alt="" class="img-fluid" style="height:170px;width:100%;"></P>
+                        
+                        Ksh 41,500<button class="btn btn-danger cart">Add to
+                                cart</button>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-header">Bulb</div>
+                        
+                            <P><img src="pictures/11.jpg" alt="" class="img-fluid" style="height:170px;width:100%;"></P>
+                        
+                        Ksh 150<button class="btn btn-danger cart">Add to cart</button>
+                        
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-header fit">Handbag+shoe</div>
+                        
+                            <P><img src="pictures/3.jpg" alt="" class="img-fluid" style="height:170px;width:100%;"></P>
+                    
+                        Ksh 5,000<button class="btn btn-danger cart">Add to cart</button>
+                        
+                    </div>
+                </div>
+            
+        </div>
+        <!--THIRD ROW CONTAINING PRODUCTS-->
+
+        <!--FOURTH ROW CONTAINING PRODUCTS-->
+        <div class="row space" style="background-color: white;">
+            
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-header">Pizza</div>
+                        
+                            <P><img src="pictures/1.jpg" alt="" class="img-fluid" style="height:170px;width:100%;"></P>
+                        
+                        Ksh 250<button class="btn btn-danger cart">Add to cart</button>
+                        
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-header">Pen</div>
+                        
+                            <P><img src="pictures/15.jpg" alt="" class="img-fluid" style="height:170px;width:100%;"></P>
+                        
+                        Ksh 25<button class="btn btn-danger cart">Add to cart</button>
+                        
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-header">Perfume</div>
+                        
+                            <P><img src="pictures/9.jpg" alt="" class="img-fluid" style="height:170px;width:100%;"></P>
+                        
+                        Ksh 1,250<button class="btn btn-danger cart">Add to
+                                cart</button>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-header">Speaker</div>
+                        
+                            <P><img src="pictures/Other_10.jpg" alt="" class="img-fluid"
+                                    style="height:170px;width:100%;"></P>
+                        
+                        Ksh 6,500<button class="btn btn-danger cart">Add to
+                                cart</button>
+                    </div>
+                </div>
+            
+        </div>
+        <!--FOURTH ROW CONTAINING PRODUCTS-->
+
+        <div class="footer" style="background-color:rgb(100, 99, 99);">
+            <div class="row" style="background-color:rgb(100, 99, 99);">
+                <div class="col-sm-4">
+                    <h6 style="margin-left:65px;color:white;"><u>Join us on</u></h6>
+
+                    <div class="icon-social">
+                        <a href="#" style="background-color:rgb(43, 37, 225);">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="#" style="background-color: red;">
+                            <i class="fa fa-youtube-play"></i>
+                        </a>
+                        <a href="#" style="background-color: rgb(35, 236, 236);">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+
+
+
+                <div class="col-sm-4 ">
+                    <h6 style="color:white;margin-left:65px"><u>Contact us</u></h6>
+                    <p style="color:white;margin-left:65px;font-size:11px;">07XXXXXXXX</p>
+                    <P style="color:white;margin-left:65px;font-size:11px;">07XXXXXXXX</P>
+
+                </div>
+
+                <!--subscription for newsletters-->
+                <div class="col-sm-4 text-center">
+                    <h6 style="color:white;"><u>Subscription</u></h6>
+                    <p style="font-size:13px;color:white">Subscribe to newsletters to get updates on exclusive offers
+                    </p>
+                    <div class="row mb-3">
+                        <div class="col-sm-10 offset-sm-1">
+                            <form class="d-flex" role="search">
+                                <input class="form-control me-2" type="search" placeholder="Enter E-mail address"
+                                    aria-label="Search">
+                                <button class="btn btn-outline-primary" type="submit">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!--subscription for newsletters-->
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
