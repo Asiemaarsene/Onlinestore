@@ -148,19 +148,24 @@ li {
 .icon-social {
     display: flex;
     flex-direction: row;
-    margin-left: 20px;
+    margin-left: 50px;
+    gap: 10px;
+    padding-bottom: 30px;
+  
 }
 
 .icon-social a {
     display: block;
     border-radius: 10px;
     text-align: center;
-    padding: 8px 9px;
+    padding: 0px 0px;
     margin-right: 5px;
-    font-size: 10px;
-    color: white !important;
-    width: 50px
+    font-size: 25px;
+    color:white!important;
+    width: 50px;
+   
 }
+
 
 
 .categories {
